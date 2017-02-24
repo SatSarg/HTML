@@ -30,6 +30,124 @@ Integrated API (Application Programming Interfaces)
 You will learn more about these new features in the upcoming lessons.
 Tap the Continue button to begin!
 
+The scale() Method
+
+The scale() method scales the current drawing. It takes two parameters:
+- The number of times by which the image should be scaled in the X-direction.
+- The number of times by which the image should be scaled in the Y-direction.
+var canvas = document.getElementById('canvas1');
+ctx =canvas.getContext('2d');
+ctx.font="bold 22px Tahoma";
+ctx.textAlign="start";
+ctx.fillText("start", 10, 30);
+ctx.translate(100, 150);
+ctx.fillText("after translate", 0, 0);
+ctx.rotate(1);
+ctx.fillText("after rotate", 0, 0);
+ctx.scale(1.5, 4);
+ctx.fillText("after scale", 0,20);
+Try It Yourself
+
+This will scale the canvas 1.5 times in the X-direction, and 4 times in Y-direction:
+
+
+HTML5 Forms
+
+HTML5 brings many features and improvements to web form creation. There are new attributes and input types that were introduced to help create better experiences for web users.
+
+Form creation is done in HTML5 the same way as it was in HTML4:
+<form>
+   <label>Your name:</label>
+   <input id="user" name="username" type="text" />
+</form>
+
+
+New Attributes
+
+HTML5 has introduced a new attribute called placeholder. On <input> and <textarea> elements, this attribute provides a hint to the user of what information can be entered into the field.
+<form>
+   <label for="email">Your e-mail address: </label> 
+   <input type="text" name="email" placeholder="email@example.com" /> 
+</form>
+
+
+The autofocus attribute makes the desired input focus when the form loads:
+<form>
+   <label for="e-mail">Your e-mail address: </label> 
+   <input type="text" name="email" autofocus/>
+</form>
+
+
+
+Forms with Required Fields
+
+The "required" attribute is used to make the input elements required.
+<form autocomplete="off">
+   <label for="e-mail">Your e-mail address: </label>
+   <input name="Email" type="text" required />
+   <input type="submit" value="Submit"/>
+</form>
+
+The form will not be submitted without filling in the required fields.
+
+The autocomplete attribute specifies whether a form or input field should have autocomplete turned on or off.
+When autocomplete is on, the browser automatically complete values based on values that the user has entered before.
+
+
+HTML5 added several new input types:
+- color
+- date
+- datetime
+- datetime-local
+- email
+- month
+- number
+- range
+- search
+- tel
+- time
+- url
+- week
+
+New input attributes in HTML5:
+- autofocus
+- form
+- formaction
+- formenctype
+- formmethod
+- formnovalidate
+- formtarget
+- height and width
+- list
+- min and max
+- multiple
+- pattern (regexp)
+- placeholder
+- required
+- step
+Input types that are not supported by old web browsers, will behave as input type text.
+
+Creating a Search Box
+
+The new search input type can be used to create a search box:
+<input id="mysearch" name="searchitem" type="search" />
+
+
+Search Options
+
+The <datalist> tag can be used to define a list of pre-defined options for the search field:
+<input id="car" type="text" list="colors" />
+<datalist id="colors">
+   <option value="Red">
+   <option value="Green">
+   <option value="Yellow">
+</datalist>
+
+
+<option> defines the options in a drop-down list for the user to select. 
+The ID of the datalist element must match with the list attribute of the input box.
+
+
 
 
 
