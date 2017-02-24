@@ -160,3 +160,59 @@ fillText(text,x,y): Draws "filled" text on the canvas.
 strokeText(text,x,y): Draws text on the canvas (no fill).
 There are many other methods aimed at helping to draw shapes and images on the canvas.
 
+
+Canvas vs. SVG
+
+Canvas
+- Elements are drawn programmatically
+- Drawing is done with pixels
+- Animations are not built in
+- High performance for pixels-based drawing operations
+- Resolution dependent
+- No support for event handlers
+- You can save the resulting image as .png or .jpg
+- Well suited for graphic-intensive games
+
+SVG
+- Elements are part of the page's DOM (Document object model)
+- Drawing is done with vectors
+- Effects, such as animations are built in
+- Based on standard XML syntax, which provides better accessibility
+- Resolution independent
+- Support for event handlers
+- Not suited for game applications
+- Best suited for applications with large rendering areas (for example, Google Maps)
+
+You can actually use both SVG and canvas on the same page, if needed.
+However, you cannot just draw SVG onto a canvas, or vice-versa.
+
+Working with Canvas
+
+The Canvas element can be transformed. As an example, a text is written on the canvas at the coordinates (20, 10).
+ctx.font="bold 22px Tahoma";
+ctx.textAlign="start";
+ctx.fillText("start", 10, 30);
+
+The translate(x,y) method is used to move the Canvas.
+x indicates how far to move the grid horizontally, and y indicates how far to move the grid vertically.
+ctx.translate(100, 150);
+ctx.fillText("after translate", 10, 30);
+Try It Yourself
+
+In this example, the canvas is moved 100px to the right, and 150px down.
+Result:
+
+The rotate() Method
+
+The rotate() method is used to rotate the HTML5 Canvas. The value must be in radians, not degrees.
+
+Here is an example that draws the same rectangle before and after rotation is set:
+ctx.fillStyle = "#FF0000";
+ctx.fillRect(10,10, 100, 100);
+
+ctx.rotate( (Math.PI / 180) * 25);  //rotate 25 degrees.
+
+ctx.fillStyle = "#0000FF";
+ctx.fillRect(10,10, 100, 100);
+
+
